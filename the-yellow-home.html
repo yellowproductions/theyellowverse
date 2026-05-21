@@ -198,6 +198,19 @@
   .svc-card p{font-family:var(--mono);font-size:13px;line-height:1.6;color:var(--gray)}
 
   /* ===== PROCESS (light) ===== */
+  .clients{background:var(--black);color:#fff;padding:5rem 0}
+  .cl-head{margin-bottom:2.8rem}
+  .cl-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);display:block;margin-bottom:.9rem}
+  .cl-title{font-family:var(--serif);font-weight:360;font-size:clamp(26px,3.4vw,42px);line-height:1.1;letter-spacing:-.03em}
+  .cl-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line-dark);
+    border:1px solid var(--line-dark);border-radius:14px;overflow:hidden}
+  .cl-grid span{background:var(--black);display:flex;align-items:center;justify-content:center;text-align:center;
+    min-height:108px;padding:1.3rem 1rem;font-family:var(--display);font-weight:500;font-size:14.5px;
+    letter-spacing:-.01em;color:rgba(255,255,255,.82);transition:background .25s ease,color .25s ease}
+  .cl-grid span:hover{background:#141414;color:var(--yellow)}
+  @media(max-width:860px){.cl-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.cl-grid{grid-template-columns:1fr}}
+
   .process{background:#fff;border-top:1px solid var(--line-light)}
   .proc-lead{margin-top:1.1rem;font-family:var(--mono);font-size:14px;color:var(--gray)}
   .proc-grid{margin-top:3.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem}
@@ -588,6 +601,28 @@
         </div>
       </div>
       <div class="works-cta reveal"><a href="the-yellow-work.html" class="pill">View all work &#8594;</a></div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENTS ===== -->
+  <section class="clients">
+    <div class="wrap">
+      <div class="cl-head reveal">
+        <span class="cl-kicker">Selected Clients</span>
+        <h2 class="cl-title">The brands that trusted the work<span class="dot">.</span></h2>
+      </div>
+      <div class="cl-grid reveal">
+        <span>Kotak Life Insurance</span>
+        <span>ICICI Prudential Life</span>
+        <span>ICICI Lombard</span>
+        <span>HDFC Bank</span>
+        <span>Tata Mutual Fund</span>
+        <span>Jindal Steel</span>
+        <span>Vedanta &middot; Hindustan Zinc</span>
+        <span>American Eagle</span>
+        <span>Royal Challengers Bengaluru</span>
+        <span>Zouk</span>
+      </div>
     </div>
   </section>
 
