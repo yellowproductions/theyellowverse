@@ -119,7 +119,7 @@
   nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s ease,box-shadow .35s ease;background:transparent}
   nav.solid{background:rgba(251,250,247,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line-light)}
   nav.on-hero{background:transparent}
-  nav.on-hero .nav-links a,nav.on-hero .logo,nav.on-hero .burger{color:#fff}
+  nav.on-hero .nav-links a,nav.on-hero .logo,nav.on-hero .burger,nav.on-hero .grp-label{color:#fff}
   .nav-in{max-width:1440px;margin:0 auto;padding:1.05rem 2.2rem;display:flex;align-items:center;justify-content:space-between}
   .logo{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:-.02em;line-height:1}
   .logo .sun{width:30px;height:30px;border-radius:50%;background:var(--yellow);flex:none;display:flex;align-items:center;justify-content:center}
@@ -128,6 +128,19 @@
   .nav-links{display:flex;gap:2.3rem;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
   .nav-links a{transition:color .2s ease}
   .nav-links a:hover{color:var(--yellow)}
+
+  .grp{position:relative}
+  .grp-label{cursor:pointer;display:flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .grp-label .caret{font-size:8px;transition:transform .25s ease}
+  .grp:hover .grp-label .caret{transform:rotate(180deg)}
+  .grp-menu{position:absolute;top:calc(100% + .8rem);left:50%;transform:translateX(-50%) translateY(-6px);
+    background:#0a0a0a;border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:.5rem;min-width:240px;
+    opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease;box-shadow:0 22px 50px -16px rgba(0,0,0,.6);z-index:120}
+  .grp:hover .grp-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+  .grp-menu a{display:block;padding:.7rem .9rem;border-radius:8px;color:#fff!important;transition:background .18s ease}
+  .grp-menu a:hover{background:rgba(255,255,255,.07)}
+  .grp-menu .gm-name{font-family:var(--display);font-size:13.5px;font-weight:600;letter-spacing:0;text-transform:none}
+  .grp-menu .gm-loc{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:#8d8d86;margin-top:.15rem}
   .burger{display:none;font-family:var(--mono);font-size:13px;letter-spacing:.06em;cursor:pointer;background:none;border:none;color:inherit;padding:.3rem .1rem}
 
   /* ===== MOBILE DRAWER ===== */
@@ -265,6 +278,10 @@
   .gco-tag{margin-top:1.3rem;display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.42);border:1px solid var(--line-dark);border-radius:100px;padding:.42rem .85rem}
   .gco-phone{margin-top:1.1rem;display:block;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--yellow);transition:opacity .2s ease}
   .gco-phone:hover{opacity:.7}
+  .gco-visit{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.5rem;background:var(--yellow);color:var(--ink);
+    font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;
+    padding:.8rem 1.4rem;border-radius:100px;transition:gap .2s ease}
+  .gco-visit:hover{gap:.85rem}
 
   /* ===== FAQ (dark) ===== */
   .faq{background:var(--black);color:#fff}
@@ -360,6 +377,7 @@
     .works-side,.testi-side{position:static}
     .founder-card{grid-template-columns:1fr}
     .founder-photo{min-height:340px}
+    .group-grid{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:760px){
     .wrap,.nav-in,.hero-in{padding-left:1.3rem;padding-right:1.3rem}
@@ -370,7 +388,7 @@
     .svc-card{border-right:none}
     .proc-grid{grid-template-columns:1fr 1fr;gap:1.4rem}
     .notes-grid,.testi-grid{grid-template-columns:1fr}
-    .group-grid{grid-template-columns:1fr}
+    .group-grid{grid-template-columns:1fr;gap:1.1rem}
   }
 </style>
 </head>
@@ -406,7 +424,14 @@
         <a href="the-yellow-services.html">Services</a>
         <a href="the-yellow-work.html">Works</a>
         <a href="the-yellow-writing.html">Writing</a>
-        <a href="#companies">The Group</a>
+        <div class="grp">
+        <span class="grp-label">The Group <span class="caret">&#9660;</span></span>
+        <div class="grp-menu">
+          <a href="yellow-productions.html"><div class="gm-name">Yellow Productions</div><div class="gm-loc">Mumbai, India</div></a>
+          <a href="perky-owl.html"><div class="gm-name">Perky Owl Designs</div><div class="gm-loc">Delhi, India</div></a>
+          <a href="yellow-designs.html"><div class="gm-name">Yellow Designs &amp; Services</div><div class="gm-loc">Muscat, Oman</div></a>
+        </div>
+      </div>
         <a href="#contact">Contact us</a>
       </div>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">Menu</button>
@@ -427,7 +452,14 @@
       <a href="the-yellow-services.html">Services</a>
       <a href="the-yellow-work.html">Works</a>
       <a href="the-yellow-writing.html">Writing</a>
-      <a href="#companies">The Group</a>
+      <div class="grp">
+        <span class="grp-label">The Group <span class="caret">&#9660;</span></span>
+        <div class="grp-menu">
+          <a href="yellow-productions.html"><div class="gm-name">Yellow Productions</div><div class="gm-loc">Mumbai, India</div></a>
+          <a href="perky-owl.html"><div class="gm-name">Perky Owl Designs</div><div class="gm-loc">Delhi, India</div></a>
+          <a href="yellow-designs.html"><div class="gm-name">Yellow Designs &amp; Services</div><div class="gm-loc">Muscat, Oman</div></a>
+        </div>
+      </div>
       <a href="#contact">Contact us</a>
     </div>
     <div class="drawer-foot">Mumbai &mdash; Delhi &mdash; Muscat</div>
@@ -642,6 +674,7 @@
           <p class="gco-desc">Production and campaigns — shoots, image banks, films, and full-scale events and exhibitions, taken from concept to on-ground execution.</p>
           <span class="gco-tag">Campaigns &middot; Events &amp; Exhibitions</span>
           <a class="gco-phone" href="tel:+917738225550">+91 77382 25550</a>
+          <a class="gco-visit" href="yellow-productions.html">Visit Yellow Productions &#8594;</a>
         </div>
 
         <div class="gco reveal reveal-up">
@@ -653,6 +686,7 @@
           <p class="gco-desc">A design-led studio — brand strategy, social and digital, outdoor and stall design, and print production, all held to a sharp point of view.</p>
           <span class="gco-tag">Strategy &middot; Social &middot; Outdoor &middot; Print</span>
           <a class="gco-phone" href="tel:+917797675938">+91 77976 75938</a>
+          <a class="gco-visit" href="perky-owl.html">Visit Perky Owl Designs &#8594;</a>
         </div>
 
         <div class="gco reveal reveal-up">
@@ -664,6 +698,7 @@
           <p class="gco-desc">Our GCC studio (SPC) — a full-service team across strategy, branding, campaigns, production, events, stalls and fabrication for Middle East clients.</p>
           <span class="gco-tag">GCC &middot; Full-Service Studio</span>
           <a class="gco-phone" href="tel:+96877290411">+968 7729 0411</a>
+          <a class="gco-visit" href="yellow-designs.html">Visit Yellow Designs &#8594;</a>
         </div>
 
       </div>
