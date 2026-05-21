@@ -102,24 +102,21 @@
   .lp-hero-meta{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:1.7rem;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.6)}
   .lp-hero-meta b{color:var(--yellow);font-weight:500}
 
-  /* SLIDESHOW HERO */
-  .po-hero{position:relative;height:100vh;min-height:600px;background:var(--black);color:#fff;overflow:hidden;display:flex;align-items:flex-end}
-  .po-slides{position:absolute;inset:0;z-index:0}
-  .po-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.08);transition:opacity 1.2s ease,transform 7s ease}
-  .po-slide.active{opacity:1;transform:scale(1)}
-  .po-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,10,.5),rgba(10,10,10,.12) 32%,rgba(10,10,10,.1) 55%,rgba(10,10,10,.8))}
-  .po-hero-in{position:relative;z-index:2;width:100%;padding-top:7rem;padding-bottom:7.5rem}
-  .po-title{font-family:var(--serif);font-weight:360;font-size:clamp(42px,7.2vw,96px);line-height:1;letter-spacing:-.035em;max-width:16ch;text-shadow:0 2px 40px rgba(0,0,0,.35)}
-  .po-sub{margin-top:1.5rem;max-width:48ch;font-size:clamp(15px,1.5vw,19px);line-height:1.65;color:rgba(255,255,255,.88);text-shadow:0 1px 20px rgba(0,0,0,.4)}
-  .po-ui{position:absolute;left:0;right:0;bottom:1.8rem;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0 2.2rem;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62)}
-  .po-dots{display:flex;gap:.5rem;flex-wrap:wrap}
-  .po-dot{width:30px;height:3px;padding:0;border:none;background:rgba(255,255,255,.28);cursor:pointer;transition:background .3s ease}
-  .po-dot.active{background:var(--yellow)}
-  .po-scroll{display:flex;align-items:center;gap:.6rem;white-space:nowrap}
+  /* SCATTER HERO */
+  .po-hero{position:relative;height:100vh;min-height:620px;background:radial-gradient(125% 90% at 50% 42%,#171717,#0a0a0a 72%);color:#fff;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .po-scatter{position:absolute;inset:0;z-index:1;transition:opacity .3s linear}
+  .po-thumb{position:absolute;width:var(--w,11vw);aspect-ratio:var(--ar,4 / 3);transform:translate(-50%,-50%) rotate(var(--r,0deg)) scale(.55);opacity:0;border-radius:9px;overflow:hidden;box-shadow:0 22px 50px -16px rgba(0,0,0,.7);animation:po-pop .9s cubic-bezier(.16,.84,.34,1) forwards;animation-delay:var(--d,0s);will-change:transform,opacity}
+  .po-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+  @keyframes po-pop{to{opacity:1;transform:translate(-50%,-50%) rotate(var(--r,0deg)) scale(1)}}
+  .po-center{position:relative;z-index:3;text-align:center;padding:0 1.4rem;pointer-events:none}
+  .po-name{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:-.025em;line-height:.9;font-size:clamp(46px,9.5vw,148px);text-shadow:0 8px 70px rgba(0,0,0,.6)}
+  .po-name-sub{margin-top:1.3rem;font-family:var(--mono);font-size:clamp(10px,1vw,13px);letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+  .po-scroll{position:absolute;left:0;right:0;bottom:1.8rem;z-index:3;display:flex;justify-content:center;align-items:center;gap:.6rem;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none}
+  .po-scroll:hover{color:var(--yellow)}
   .po-scroll .ar{display:inline-block;animation:po-bounce 1.8s ease infinite}
   @keyframes po-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
-  @media(max-width:680px){.po-ui{flex-direction:column;align-items:flex-start;gap:.9rem}.po-scroll{display:none}}
-  @media(prefers-reduced-motion:reduce){.po-slide{transition:opacity .4s ease;transform:none}.po-slide.active{transform:none}.po-scroll .ar{animation:none}}
+  @media(max-width:680px){.po-thumb.hide-sm{display:none}.po-thumb{box-shadow:0 12px 26px -12px rgba(0,0,0,.7)}}
+  @media(prefers-reduced-motion:reduce){.po-thumb{animation:none;opacity:.92;transform:translate(-50%,-50%) rotate(var(--r,0deg))}.po-scroll .ar{animation:none}}
 
   /* SECTIONS */
   .lp-sec{padding:5.5rem 0}
@@ -238,34 +235,28 @@
 </div>
 
 <header class="po-hero" id="top">
-  <div class="po-slides">
-    <div class="po-slide active" style="background-image:url('images/projects/infinity-03.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/rcb-02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/sky-02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/jindal-oman-05.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/lombard-g02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/vedanta-g02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/zouk-g02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/tata-g02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/hdfc-g02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/rr-g02.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/jff-03.jpg')"></div>
-    <div class="po-slide" style="background-image:url('images/projects/krown-g02.jpg')"></div>
+  <div class="po-scatter" id="poScatter">
+    <div class="po-thumb" style="left:13%;top:31%;--w:12.5vw;--ar:4/3;--r:-8deg;--d:.05s"><img src="images/projects/infinity-03.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:24%;top:63%;--w:11vw;--ar:4/3;--r:6deg;--d:.16s"><img src="images/projects/rcb-02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:35%;top:30%;--w:9.5vw;--ar:3/4;--r:-5deg;--d:.27s"><img src="images/projects/sky-02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb hide-sm" style="left:33%;top:73%;--w:9vw;--ar:4/3;--r:8deg;--d:.40s"><img src="images/projects/jindal-oman-05.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:50%;top:23%;--w:12vw;--ar:4/3;--r:-3deg;--d:.10s"><img src="images/projects/lombard-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:50%;top:77%;--w:13vw;--ar:4/3;--r:3deg;--d:.22s"><img src="images/projects/vedanta-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:66%;top:29%;--w:9.5vw;--ar:3/4;--r:5deg;--d:.33s"><img src="images/projects/zouk-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb hide-sm" style="left:67%;top:71%;--w:11vw;--ar:4/3;--r:-7deg;--d:.45s"><img src="images/projects/tata-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:78%;top:46%;--w:12vw;--ar:4/3;--r:6deg;--d:.14s"><img src="images/projects/hdfc-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb hide-sm" style="left:88%;top:30%;--w:10vw;--ar:3/4;--r:-5deg;--d:.26s"><img src="images/projects/rr-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb hide-sm" style="left:88%;top:66%;--w:11vw;--ar:4/3;--r:8deg;--d:.37s"><img src="images/projects/jff-03.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb hide-sm" style="left:9%;top:57%;--w:10vw;--ar:3/4;--r:7deg;--d:.50s"><img src="images/projects/krown-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
   </div>
-  <div class="po-scrim"></div>
-  <div class="wrap po-hero-in">
-    <a href="the-yellow-home.html#companies" class="lp-back">&#8592; The Group</a>
-    <div class="lp-eyebrow">Perky Owl Designs &middot; Delhi</div>
-    <h1 class="po-title">Sharp ideas, made visible.</h1>
-    <p class="po-sub">The design-led studio of The Yellow — strategy-first ideas, carried across every surface a brand lives on. A few of the things we've made.</p>
+  <div class="po-center">
+    <h1 class="po-name">Perky Owl<br>Designs</h1>
+    <p class="po-name-sub">Brand &amp; design studio &middot; Delhi &middot; Part of The Yellow</p>
   </div>
-  <div class="po-ui">
-    <div class="po-dots" id="poDots"></div>
-    <div class="po-scroll">Scroll to explore <span class="ar">&#8595;</span></div>
-  </div>
+  <a class="po-scroll" href="#what">See the work <span class="ar">&#8595;</span></a>
 </header>
 
-<section class="lp-sec">
+<section class="lp-sec" id="what">
   <div class="wrap">
     <div class="lp-kicker reveal">What We Do</div>
     <h2 class="lp-h2 reveal">Design that starts with strategy, not decoration.</h2>
@@ -428,48 +419,29 @@
   }),{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // ----- Perky Owl hero slideshow: auto-advance + scroll/swipe + dots -----
+  // ----- Perky Owl scatter hero: mouse parallax + scroll fade -----
   (function(){
     const heroEl=document.getElementById('top');
-    if(!heroEl) return;
-    const slides=[...heroEl.querySelectorAll('.po-slide')];
-    const dotsWrap=document.getElementById('poDots');
-    if(slides.length<2||!dotsWrap) return;
-    const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-    let idx=0, timer=null, lock=false;
-    const dots=slides.map((_,k)=>{
-      const b=document.createElement('button');
-      b.className='po-dot'+(k===0?' active':''); b.type='button';
-      b.setAttribute('aria-label','Show creative '+(k+1));
-      b.addEventListener('click',()=>{go(k);restart();});
-      dotsWrap.appendChild(b); return b;
-    });
-    function go(n){
-      idx=(n+slides.length)%slides.length;
-      slides.forEach((s,k)=>s.classList.toggle('active',k===idx));
-      dots.forEach((d,k)=>d.classList.toggle('active',k===idx));
+    const scatter=document.getElementById('poScatter');
+    if(!heroEl||!scatter) return;
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+    let mx=0,my=0,tx=0,ty=0,raf=null;
+    function loop(){
+      tx+=(mx-tx)*0.08; ty+=(my-ty)*0.08;
+      scatter.style.transform='translate('+tx.toFixed(2)+'px,'+ty.toFixed(2)+'px)';
+      if(Math.abs(mx-tx)>0.1||Math.abs(my-ty)>0.1){ raf=requestAnimationFrame(loop); } else { raf=null; }
     }
-    function restart(){ if(reduce) return; clearInterval(timer); timer=setInterval(()=>go(idx+1),3800); }
-    function bump(dir){ if(reduce) return; if(lock) return; lock=true; go(idx+dir); restart(); setTimeout(()=>lock=false,650); }
-    restart();
-    // wheel: cycle creatives while the hero fills the screen, then release to page scroll
-    window.addEventListener('wheel',(e)=>{
-      if(reduce) return;
+    heroEl.addEventListener('mousemove',(e)=>{
       const r=heroEl.getBoundingClientRect();
-      if(!(r.top<=0 && r.bottom>window.innerHeight*0.6)) return;
-      if(e.deltaY>0 && idx<slides.length-1){ e.preventDefault(); bump(1); }
-      else if(e.deltaY<0 && idx>0 && window.scrollY<5){ e.preventDefault(); bump(-1); }
-    },{passive:false});
-    // touch swipe
-    let ty=null;
-    heroEl.addEventListener('touchstart',e=>{ty=e.touches[0].clientY;},{passive:true});
-    heroEl.addEventListener('touchend',e=>{
-      if(ty==null) return;
-      const dy=ty-e.changedTouches[0].clientY;
-      if(Math.abs(dy)>45){ if(dy>0&&idx<slides.length-1) bump(1); else if(dy<0&&idx>0&&window.scrollY<5) bump(-1); }
-      ty=null;
+      mx=((e.clientX-r.left)/r.width-0.5)*-26;
+      my=((e.clientY-r.top)/r.height-0.5)*-26;
+      if(!raf) raf=requestAnimationFrame(loop);
+    });
+    heroEl.addEventListener('mouseleave',()=>{ mx=0;my=0; if(!raf) raf=requestAnimationFrame(loop); });
+    window.addEventListener('scroll',()=>{
+      const p=Math.min(1,Math.max(0,-heroEl.getBoundingClientRect().top/window.innerHeight));
+      scatter.style.opacity=(1-p*0.9).toFixed(2);
     },{passive:true});
-    document.addEventListener('visibilitychange',()=>{ if(document.hidden) clearInterval(timer); else restart(); });
   })();
 </script>
 </body>
