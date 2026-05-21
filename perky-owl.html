@@ -105,9 +105,8 @@
   /* SCATTER HERO */
   .po-hero{position:relative;height:100vh;min-height:620px;background:radial-gradient(125% 90% at 50% 42%,#171717,#0a0a0a 72%);color:#fff;overflow:hidden;display:flex;align-items:center;justify-content:center}
   .po-scatter{position:absolute;inset:0;z-index:1;transition:opacity .3s linear}
-  .po-thumb{position:absolute;width:var(--w,11vw);aspect-ratio:var(--ar,4 / 3);transform:translate(-50%,-50%) rotate(var(--r,0deg)) scale(.55);opacity:0;border-radius:9px;overflow:hidden;box-shadow:0 22px 50px -16px rgba(0,0,0,.7);animation:po-pop .9s cubic-bezier(.16,.84,.34,1) forwards;animation-delay:var(--d,0s);will-change:transform,opacity}
+  .po-thumb{position:absolute;width:var(--w,11vw);aspect-ratio:var(--ar,4 / 3);transform:translate(-50%,-50%) rotate(var(--r,0deg)) scale(.8);opacity:0;border-radius:9px;overflow:hidden;box-shadow:0 22px 50px -16px rgba(0,0,0,.7);will-change:transform,opacity}
   .po-thumb img{display:block;width:100%;height:100%;object-fit:cover}
-  @keyframes po-pop{to{opacity:1;transform:translate(-50%,-50%) rotate(var(--r,0deg)) scale(1)}}
   .po-center{position:relative;z-index:3;text-align:center;padding:0 1.4rem;pointer-events:none}
   .po-name{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:-.025em;line-height:.9;font-size:clamp(46px,9.5vw,148px);text-shadow:0 8px 70px rgba(0,0,0,.6)}
   .po-name-sub{margin-top:1.3rem;font-family:var(--mono);font-size:clamp(10px,1vw,13px);letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.72)}
@@ -116,7 +115,7 @@
   .po-scroll .ar{display:inline-block;animation:po-bounce 1.8s ease infinite}
   @keyframes po-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
   @media(max-width:680px){.po-thumb.hide-sm{display:none}.po-thumb{box-shadow:0 12px 26px -12px rgba(0,0,0,.7)}}
-  @media(prefers-reduced-motion:reduce){.po-thumb{animation:none;opacity:.92;transform:translate(-50%,-50%) rotate(var(--r,0deg))}.po-scroll .ar{animation:none}}
+  @media(prefers-reduced-motion:reduce){.po-thumb{opacity:.95;transform:translate(-50%,-50%) rotate(var(--r,0deg))}.po-scroll .ar{animation:none}}
 
   /* SECTIONS */
   .lp-sec{padding:5.5rem 0}
@@ -236,24 +235,25 @@
 
 <header class="po-hero" id="top">
   <div class="po-scatter" id="poScatter">
-    <div class="po-thumb" style="left:13%;top:31%;--w:12.5vw;--ar:4/3;--r:-8deg;--d:.05s"><img src="images/projects/infinity-03.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb" style="left:24%;top:63%;--w:11vw;--ar:4/3;--r:6deg;--d:.16s"><img src="images/projects/rcb-02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb" style="left:35%;top:30%;--w:9.5vw;--ar:3/4;--r:-5deg;--d:.27s"><img src="images/projects/sky-02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb hide-sm" style="left:33%;top:73%;--w:9vw;--ar:4/3;--r:8deg;--d:.40s"><img src="images/projects/jindal-oman-05.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb" style="left:50%;top:23%;--w:12vw;--ar:4/3;--r:-3deg;--d:.10s"><img src="images/projects/lombard-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb" style="left:50%;top:77%;--w:13vw;--ar:4/3;--r:3deg;--d:.22s"><img src="images/projects/vedanta-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb" style="left:66%;top:29%;--w:9.5vw;--ar:3/4;--r:5deg;--d:.33s"><img src="images/projects/zouk-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb hide-sm" style="left:67%;top:71%;--w:11vw;--ar:4/3;--r:-7deg;--d:.45s"><img src="images/projects/tata-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb" style="left:78%;top:46%;--w:12vw;--ar:4/3;--r:6deg;--d:.14s"><img src="images/projects/hdfc-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb hide-sm" style="left:88%;top:30%;--w:10vw;--ar:3/4;--r:-5deg;--d:.26s"><img src="images/projects/rr-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb hide-sm" style="left:88%;top:66%;--w:11vw;--ar:4/3;--r:8deg;--d:.37s"><img src="images/projects/jff-03.jpg" alt="Perky Owl creative" loading="eager"></div>
-    <div class="po-thumb hide-sm" style="left:9%;top:57%;--w:10vw;--ar:3/4;--r:7deg;--d:.50s"><img src="images/projects/krown-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:51%;top:16%;--w:12vw;--ar:4/3;--r:-6deg"><img src="images/projects/infinity-03.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:66%;top:24%;--w:10.5vw;--ar:4/3;--r:5deg"><img src="images/projects/rcb-02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:83%;top:32%;--w:9.5vw;--ar:3/4;--r:-4deg"><img src="images/projects/sky-02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:87%;top:49%;--w:11.5vw;--ar:4/3;--r:6deg"><img src="images/projects/hdfc-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:81%;top:68%;--w:10.5vw;--ar:4/3;--r:-5deg"><img src="images/projects/tata-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:66%;top:78%;--w:9.5vw;--ar:3/4;--r:4deg"><img src="images/projects/zouk-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:49%;top:84%;--w:12.5vw;--ar:4/3;--r:3deg"><img src="images/projects/vedanta-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:34%;top:77%;--w:10vw;--ar:4/3;--r:-7deg"><img src="images/projects/jindal-oman-05.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:17%;top:66%;--w:10.5vw;--ar:4/3;--r:6deg"><img src="images/projects/jff-03.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:13%;top:49%;--w:12vw;--ar:4/3;--r:-3deg"><img src="images/projects/lombard-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:18%;top:32%;--w:9.5vw;--ar:3/4;--r:-5deg"><img src="images/projects/rr-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
+    <div class="po-thumb" style="left:34%;top:22%;--w:10vw;--ar:4/3;--r:7deg"><img src="images/projects/krown-g02.jpg" alt="Perky Owl creative" loading="eager"></div>
   </div>
   <div class="po-center">
     <h1 class="po-name">Perky Owl<br>Designs</h1>
     <p class="po-name-sub">Brand &amp; design studio &middot; Delhi &middot; Part of The Yellow</p>
   </div>
   <a class="po-scroll" href="#what">See the work <span class="ar">&#8595;</span></a>
+  <noscript><style>.po-thumb{opacity:.9}</style></noscript>
 </header>
 
 <section class="lp-sec" id="what">
@@ -419,29 +419,46 @@
   }),{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-  // ----- Perky Owl scatter hero: mouse parallax + scroll fade -----
+  // ----- Perky Owl scatter hero: circular spotlight reveal (orbits, follows cursor) -----
   (function(){
     const heroEl=document.getElementById('top');
     const scatter=document.getElementById('poScatter');
     if(!heroEl||!scatter) return;
-    if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-    let mx=0,my=0,tx=0,ty=0,raf=null;
-    function loop(){
-      tx+=(mx-tx)*0.08; ty+=(my-ty)*0.08;
-      scatter.style.transform='translate('+tx.toFixed(2)+'px,'+ty.toFixed(2)+'px)';
-      if(Math.abs(mx-tx)>0.1||Math.abs(my-ty)>0.1){ raf=requestAnimationFrame(loop); } else { raf=null; }
+    const thumbs=[...scatter.querySelectorAll('.po-thumb')];
+    if(!thumbs.length) return;
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches){ thumbs.forEach(t=>{t.style.opacity=1;t.style.transform='translate(-50%,-50%) rotate(var(--r,0deg))';}); return; }
+    const fine=matchMedia('(pointer:fine)').matches;
+    let centers=[], R=600, useMouse=false, lastMove=0, angle=-1.3, running=true;
+    const spot={x:0,y:0};
+    function measure(){
+      R=Math.min(innerWidth,innerHeight)*0.42;
+      centers=thumbs.map(t=>{const r=t.getBoundingClientRect();return {x:r.left+r.width/2,y:r.top+r.height/2};});
     }
-    heroEl.addEventListener('mousemove',(e)=>{
-      const r=heroEl.getBoundingClientRect();
-      mx=((e.clientX-r.left)/r.width-0.5)*-26;
-      my=((e.clientY-r.top)/r.height-0.5)*-26;
-      if(!raf) raf=requestAnimationFrame(loop);
-    });
-    heroEl.addEventListener('mouseleave',()=>{ mx=0;my=0; if(!raf) raf=requestAnimationFrame(loop); });
-    window.addEventListener('scroll',()=>{
-      const p=Math.min(1,Math.max(0,-heroEl.getBoundingClientRect().top/window.innerHeight));
-      scatter.style.opacity=(1-p*0.9).toFixed(2);
-    },{passive:true});
+    function frame(){
+      if(running){
+        const hr=heroEl.getBoundingClientRect();
+        if(useMouse && performance.now()-lastMove>1600) useMouse=false;
+        if(!useMouse){
+          angle+=0.011;
+          spot.x=hr.left+hr.width/2+Math.cos(angle)*hr.width*0.30;
+          spot.y=hr.top+hr.height*0.5+Math.sin(angle)*hr.height*0.34;
+        }
+        for(let i=0;i<thumbs.length;i++){
+          const c=centers[i]; if(!c) continue;
+          let o=Math.max(0,1-Math.hypot(c.x-spot.x,c.y-spot.y)/R);
+          o=o*o*(3-2*o);
+          thumbs[i].style.opacity=o.toFixed(3);
+          thumbs[i].style.transform='translate(-50%,-50%) rotate(var(--r,0deg)) scale('+(0.8+0.2*o).toFixed(3)+')';
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+    measure();
+    addEventListener('resize',measure,{passive:true});
+    addEventListener('scroll',measure,{passive:true});
+    if(fine) heroEl.addEventListener('mousemove',e=>{spot.x=e.clientX;spot.y=e.clientY;useMouse=true;lastMove=performance.now();});
+    new IntersectionObserver(es=>es.forEach(e=>{running=e.isIntersecting;}),{rootMargin:'0px'}).observe(heroEl);
+    requestAnimationFrame(frame);
   })();
 </script>
 </body>
