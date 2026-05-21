@@ -153,6 +153,16 @@
   .drawer-links a:hover,.drawer-links a.here{color:var(--yellow)}
   .drawer-foot{flex:none;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4)}
   body.nav-locked{overflow:hidden}
+  /* drawer: show The Group expanded (phones have no hover) */
+  .drawer .grp{position:static}
+  .drawer .grp-label{display:inline-flex;align-items:center;font-family:var(--serif);font-weight:360;font-size:clamp(30px,8vw,46px);letter-spacing:-.03em;color:#fff;text-transform:none;padding:.26rem 0;cursor:default}
+  .drawer .grp-label .caret{display:none}
+  .drawer .grp-menu{position:static;opacity:1;visibility:visible;transform:none;background:none;border:none;box-shadow:none;padding:0;min-width:0}
+  .drawer .grp-menu::before{display:none}
+  .drawer .grp-menu a{padding:.18rem 0 .18rem 1.2rem;color:var(--gray-light)!important}
+  .drawer .grp-menu a:hover{color:var(--yellow)!important}
+  .drawer .grp-menu .gm-name{font-family:var(--serif);font-weight:360;font-size:clamp(17px,4.4vw,22px);letter-spacing:-.02em}
+  .drawer .grp-menu .gm-loc{display:none}
 
   /* ===== HERO ===== */
   .hero{position:sticky;top:0;height:100vh;min-height:560px;display:flex;align-items:flex-end;overflow:hidden;background:#1a0c08;z-index:0}
@@ -184,7 +194,6 @@
   .about-text{flex:1;font-weight:400;letter-spacing:-.005em;line-height:1.5;font-size:clamp(18px,1.9vw,24px);max-width:none;color:rgba(255,255,255,.62)}
   .about-text .big{font-weight:700;color:var(--yellow);font-size:clamp(30px,4.6vw,64px);letter-spacing:-.025em;line-height:1.06}
   .about-since{margin-top:3.5rem;font-family:var(--mono);font-size:14px;color:rgba(255,255,255,.6);max-width:60ch;line-height:1.6}
-  .about-clients{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem 2.2rem;font-weight:700;font-size:clamp(15px,1.6vw,20px);color:rgba(255,255,255,.32)}
 
   /* ===== SERVICES (light) ===== */
   .services{background:var(--paper)}
@@ -206,9 +215,8 @@
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
     mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
   .cl-row{display:flex;overflow:hidden}
-  .cl-track{display:flex;flex:none;align-items:center;width:max-content;animation:cl-scroll 55s linear infinite;will-change:transform}
+  .cl-track{display:flex;flex:none;align-items:center;width:max-content;animation:cl-scroll 34s linear infinite;will-change:transform}
   .cl-track.rev{animation-direction:reverse}
-  .clients:hover .cl-track{animation-play-state:paused}
   .cl-track span{flex:none;white-space:nowrap;padding:.7rem 0;font-family:var(--display);font-weight:500;font-size:clamp(17px,2.1vw,28px);letter-spacing:-.01em;color:rgba(255,255,255,.72);transition:color .25s ease}
   .cl-track span:hover{color:var(--yellow)}
   .cl-track span::after{content:"·";display:inline-block;margin:0 2rem;color:rgba(255,255,255,.25)}
@@ -519,9 +527,6 @@
         </p>
       </div>
       <p class="about-since reveal">Building brands across financial services, industrial, real estate, retail, and sports &amp; events — since 2016.</p>
-      <div class="about-clients reveal">
-        <span>Kotak Life</span><span>ICICI Prudential</span><span>Vedanta</span><span>Hindustan Zinc</span><span>Jindal Steel</span><span>HDFC Bank</span><span>Tata Mutual Fund</span><span>American Eagle</span><span>RCB</span>
-      </div>
     </div>
   </section>
 

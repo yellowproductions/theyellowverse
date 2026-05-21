@@ -89,6 +89,16 @@
   .drawer-links a:hover,.drawer-links a.here{color:var(--yellow)}
   .drawer-foot{flex:none;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4)}
   body.nav-locked{overflow:hidden}
+  /* drawer: show The Group expanded (phones have no hover) */
+  .drawer .grp{position:static}
+  .drawer .grp-label{display:inline-flex;align-items:center;font-family:var(--serif);font-weight:360;font-size:clamp(30px,8vw,46px);letter-spacing:-.03em;color:#fff;text-transform:none;padding:.26rem 0;cursor:default}
+  .drawer .grp-label .caret{display:none}
+  .drawer .grp-menu{position:static;opacity:1;visibility:visible;transform:none;background:none;border:none;box-shadow:none;padding:0;min-width:0}
+  .drawer .grp-menu::before{display:none}
+  .drawer .grp-menu a{padding:.18rem 0 .18rem 1.2rem;color:var(--gray-light)!important}
+  .drawer .grp-menu a:hover{color:var(--yellow)!important}
+  .drawer .grp-menu .gm-name{font-family:var(--serif);font-weight:360;font-size:clamp(17px,4.4vw,22px);letter-spacing:-.02em}
+  .drawer .grp-menu .gm-loc{display:none}
 
   /* HERO */
   .lp-hero{background:var(--black);color:#fff;padding:9.5rem 0 4.5rem;position:relative;overflow:hidden}
