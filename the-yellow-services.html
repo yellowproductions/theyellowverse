@@ -84,7 +84,7 @@
   .nav-links a:hover{color:var(--yellow)}
   .nav-links a.here{color:var(--yellow)}
 
-  .grp{position:relative}
+  .grp{position:relative} .grp-menu::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:.9rem}
   .grp-label{cursor:pointer;display:flex;align-items:center;gap:.4rem;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
   .grp-label .caret{font-size:8px;transition:transform .25s ease}
   .grp:hover .grp-label .caret{transform:rotate(180deg)}
