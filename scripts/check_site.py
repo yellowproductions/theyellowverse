@@ -31,10 +31,15 @@ for fname in html_files:
     with open(path, encoding="utf-8") as fh:
         s = fh.read()
 
-    # --- 1. internal links resolve ---
-    for link in re.findall(r'href="((?:the-yellow-[a-z-]*|index)\.html)"', s):
-        if not os.path.isfile(os.path.join(ROOT, link)):
-            errors.append(f"{fname}: broken internal link -> {link}")
+    # skip redirect stubs left at old URLs (they forward to the clean URL)
+    if 'http-equiv="refresh"' in s:
+        continue
+
+    # --- 1. internal links resolve (clean, extensionless URLs) ---
+    for link in re.findall(r'href="/([a-z0-9-]*)(?:#[^"]*)?"', s):
+        target = "index.html" if link == "" else f"{link}.html"
+        if not os.path.isfile(os.path.join(ROOT, target)):
+            errors.append(f"{fname}: broken internal link -> /{link}")
 
     # --- 2. required SEO tags ---
     checks = {
