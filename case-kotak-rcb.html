@@ -149,6 +149,15 @@
   .foot-col a{display:block;font-size:14px;color:rgba(255,255,255,.7);margin-bottom:.65rem;transition:color .2s ease}
   .foot-col a:hover{color:#fff}
   .foot-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:3rem;padding-top:1.6rem;border-top:1px solid var(--line-dark);font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+  footer nav{position:static;background:none;z-index:auto}
+  .foot-brand{max-width:360px}
+  .foot-tagline{margin-top:1.1rem;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.55);text-transform:none;letter-spacing:0}
+  .foot-addr{font-style:normal}
+  .foot-offices{display:block;font-size:14px;color:rgba(255,255,255,.5);padding:.55rem 0 .25rem}
+  .foot-social{margin-top:.9rem}
+  .foot-legal a{color:inherit;transition:color .2s ease}
+  .foot-legal a:hover{color:var(--yellow)}
+  @media(max-width:680px){.foot-tagline{max-width:none}}
 
   .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.16,.84,.34,1),transform .8s cubic-bezier(.16,.84,.34,1)}
   .reveal.in{opacity:1;transform:none}
@@ -299,40 +308,51 @@
 </section>
 
 <footer>
-  <div class="wrap">
-    <div class="foot-top">
-      <a href="the-yellow-home.html" class="logo" style="color:#fff">
-        <span class="sun" aria-hidden="true"></span>
-        <span class="lg-text"><span>THE</span><span>YELLOW</span></span>
-      </a>
-      <div class="foot-cols">
-        <div class="foot-col">
-          <h4>Studio</h4>
-          <a href="the-yellow-home.html">Home</a>
-          <a href="the-yellow-services.html">Services</a>
-          <a href="the-yellow-work.html">Works</a>
-          <a href="the-yellow-writing.html">Writing</a>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a href="the-yellow-home.html" class="logo" style="color:#fff" aria-label="The Yellow — home">
+            <span class="sun" aria-hidden="true"></span>
+            <span class="lg-text"><span>THE</span><span>YELLOW</span></span>
+          </a>
+          <p class="foot-tagline">A design-led brand &amp; content studio turning complex business challenges into sharp, simple ideas — across India and the Middle East.</p>
         </div>
-        <div class="foot-col">
-          <h4>More</h4>
-          <a href="#">FAQs</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#">Privacy Policy</a>
-        </div>
-        <div class="foot-col">
-          <h4>Reach</h4>
-          <a href="https://instagram.com">Instagram</a>
-          <a href="https://linkedin.com">LinkedIn</a>
-          <a href="mailto:creative@yellowproductions.co.in">Email</a>
+        <div class="foot-cols">
+          <nav class="foot-col" aria-label="Footer">
+            <h4>Navigate</h4>
+            <a href="the-yellow-home.html">Home</a>
+            <a href="the-yellow-services.html">Services</a>
+            <a href="the-yellow-work.html">Our Works</a>
+            <a href="the-yellow-writing.html">Writing</a>
+            <a href="the-yellow-work.html#contact">Contact us</a>
+          </nav>
+          <nav class="foot-col" aria-label="The Group">
+            <h4>The Group</h4>
+            <a href="yellow-productions.html">Yellow Productions</a>
+            <a href="perky-owl.html">Perky Owl Designs</a>
+            <a href="yellow-designs.html">Yellow Designs &amp; Services</a>
+          </nav>
+          <div class="foot-col">
+            <h4>Studio</h4>
+            <address class="foot-addr">
+              <a href="mailto:creative@yellowproductions.co.in">creative@yellowproductions.co.in</a>
+              <a href="tel:+919999993241">+91 99999 93241</a>
+              <span class="foot-offices">Mumbai &middot; Delhi &middot; Muscat</span>
+            </address>
+            <div class="foot-social">
+              <a href="https://www.instagram.com/suriti" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.behance.net/marketingwithyellow" target="_blank" rel="noopener">Behance</a>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 The Yellow. All rights reserved.</span>
+        <span class="foot-legal"><a href="#">Privacy Policy</a> &middot; <a href="#">Terms</a></span>
+        <span>Powered by The Yellowverse &middot; Crafted in Mumbai 🪷</span>
+      </div>
     </div>
-    <div class="foot-bottom">
-      <span>&copy; The Yellow 2026 — Yellow Productions &middot; Perky Owl Designs &middot; Yellow Designs SPC</span>
-      <span>Mumbai &mdash; Delhi &mdash; Muscat</span>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 <script type="module">
   const drawer=document.getElementById('drawer');
