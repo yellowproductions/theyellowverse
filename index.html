@@ -178,6 +178,11 @@
   .hero-phone{display:inline-flex;align-items:center;gap:.8rem;margin-top:2rem;background:var(--paper);color:var(--ink);font-weight:600;font-size:clamp(15px,1.5vw,19px);padding:.95rem 1.5rem;letter-spacing:-.01em;transition:transform .25s ease}
   .hero-phone:hover{transform:translateY(-2px)}
   .hero-phone .ch{color:#b88}
+  .hero-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:2rem}
+  .hero-cta-row .hero-phone{margin-top:0}
+  .hero-call{display:inline-flex;align-items:center;color:#fff;font-family:var(--mono);font-size:14px;letter-spacing:.03em;transition:color .2s ease}
+  .hero-call b{font-weight:600;margin-left:.4em}
+  .hero-call:hover{color:var(--yellow)}
 
   /* ===== SECTION BASE ===== */
   section{position:relative}
@@ -492,8 +497,9 @@
     <div class="hero-in">
       <h1 class="reveal">Your favourite brands have a <span class="hl">secret</span>. We might be it!</h1>
       <p class="hero-sub reveal">Creative group specialising in brand design, campaigns, production and events. Working across India and the Middle East since 2016.</p>
-      <div class="reveal">
+      <div class="reveal hero-cta-row">
         <a href="#contact" class="hero-phone" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Start a project <span class="ch">&#8594;</span></a>
+        <a href="tel:+919999993421" class="hero-call">or call <b>+91 99999 93421</b></a>
       </div>
     </div>
   </header>
