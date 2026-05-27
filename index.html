@@ -232,6 +232,15 @@
   @media(prefers-reduced-motion:reduce){.cl-track{animation:none}.cl-row{overflow-x:auto}}
   @media(max-width:680px){.cl-logo{width:150px;height:86px;margin:0 .4rem;padding:0 .7rem;border-radius:11px}.cl-logo img{max-height:54px;max-width:86%}}
 
+  .why{background:var(--paper)}
+  .why-lead{margin-top:1.1rem;font-family:var(--mono);font-size:14px;line-height:1.7;color:var(--gray);max-width:64ch}
+  .why-grid{margin-top:3.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+  .why-card{border-top:2px solid var(--ink);padding-top:1.3rem}
+  .why-card .wn{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--yellow-deep);margin-bottom:1rem}
+  .why-card h3{font-family:var(--serif);font-weight:500;font-size:clamp(19px,2vw,23px);letter-spacing:-.012em;margin-bottom:.7rem;line-height:1.2}
+  .why-card p{font-family:var(--mono);font-size:13px;line-height:1.65;color:var(--gray)}
+  @media(max-width:860px){.why-grid{grid-template-columns:1fr 1fr;gap:1.6rem}}
+  @media(max-width:560px){.why-grid{grid-template-columns:1fr}}
   .process{background:#fff;border-top:1px solid var(--line-light)}
   .proc-lead{margin-top:1.1rem;font-family:var(--mono);font-size:14px;color:var(--gray)}
   .proc-grid{margin-top:3.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.8rem}
@@ -632,6 +641,23 @@
         </div>
       </div>
       <div class="works-cta reveal"><a href="/work" class="pill">View all work &#8594;</a></div>
+    </div>
+  </section>
+
+  <!-- ===== WHY THE YELLOW ===== -->
+  <section class="why sec-pad">
+    <div class="wrap">
+      <div class="headbar on-light reveal"><span>(Why The Yellow)</span><span>The Yellow</span></div>
+      <h2 class="sec-title reveal" style="margin-top:2.4rem">True to the craft — from the first idea to the last detail.</h2>
+      <p class="why-lead reveal">No hand-offs, no diluted briefs, no excuses. One team that thinks and makes — fast, sharp, and built entirely around the work.</p>
+      <div class="why-grid">
+        <div class="why-card reveal"><div class="wn">01</div><h3>Strategy + production, one roof</h3><p>The strategist and the makers sit in the same room. Same brief, same team, first idea to final delivery — nothing lost in the hand-off.</p></div>
+        <div class="why-card reveal"><div class="wn">02</div><h3>Built for speed</h3><p>Available around the clock, every day. When the brief is clear we move fast — flexibility is the default, not a favour.</p></div>
+        <div class="why-card reveal"><div class="wn">03</div><h3>Cross-industry range</h3><p>BFSI, lifestyle, industrial, infrastructure, sports — ideas that work in one category, borrowed and sharpened for the next.</p></div>
+        <div class="why-card reveal"><div class="wn">04</div><h3>India + the Gulf, on the ground</h3><p>Mumbai, Delhi and Muscat — including an independent Omani entity. Real presence and on-ground execution, not remote.</p></div>
+        <div class="why-card reveal"><div class="wn">05</div><h3>Experiential thinking</h3><p>From campaigns to stalls to stadiums — brands people don't just see, but step into and remember.</p></div>
+        <div class="why-card reveal"><div class="wn">06</div><h3>The work does the talking</h3><p>Top conglomerates came to us on word of mouth alone — no cold pitches. We earn the next brief by nailing this one.</p></div>
+      </div>
     </div>
   </section>
 
