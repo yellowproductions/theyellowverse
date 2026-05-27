@@ -222,25 +222,15 @@
   .cl-head{margin-bottom:2.6rem}
   .cl-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow-deep);display:block;margin-bottom:.9rem}
   .cl-title{font-family:var(--serif);font-weight:360;font-size:clamp(26px,3.4vw,42px);line-height:1.1;letter-spacing:-.03em}
-  .cl-marquee{display:flex;flex-direction:column;gap:1.2rem;
-    -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
-    mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
-  .cl-row{display:flex;overflow:hidden}
-  .cl-track{display:flex;flex:none;align-items:center;width:max-content;animation:cl-scroll 70s linear infinite;will-change:transform}
+  .cl-marquee{display:flex;flex-direction:column;gap:1rem}
+  .cl-row{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+  .cl-track{display:flex;flex:none;align-items:stretch;width:max-content;animation:cl-scroll 55s linear infinite;will-change:transform}
   .cl-track.rev{animation-direction:reverse}
-  .cl-logo{flex:none;width:210px;height:96px;display:flex;align-items:center;justify-content:center;padding:0 1rem;opacity:.9;transition:opacity .25s ease}
-  .cl-logo:hover{opacity:1}
-  .cl-logo img{max-width:82%;max-height:64px;width:auto;height:auto;object-fit:contain}
+  .cl-logo{flex:none;width:200px;height:104px;margin:0 .5rem;background:#fff;border:1px solid var(--line-light);border-radius:14px;display:flex;align-items:center;justify-content:center;padding:0 1.4rem}
+  .cl-logo img{max-width:80%;max-height:50px;width:auto;height:auto;object-fit:contain}
   @keyframes cl-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @media(prefers-reduced-motion:reduce){.cl-track{animation:none}.cl-row{overflow-x:auto}}
-  @media(max-width:680px){
-    .cl-marquee{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;-webkit-mask-image:none;mask-image:none}
-    .cl-row,.cl-track{display:contents}
-    .cl-track:not(.rev) .cl-logo:nth-child(n+15){display:none}
-    .cl-track.rev .cl-logo:nth-child(n+14){display:none}
-    .cl-logo{width:auto;height:88px;padding:0 .5rem}
-    .cl-logo img{max-height:52px;max-width:80%}
-  }
+  @media(max-width:680px){.cl-logo{width:148px;height:82px;margin:0 .4rem;padding:0 1rem;border-radius:11px}.cl-logo img{max-height:38px;max-width:78%}}
 
   .process{background:#fff;border-top:1px solid var(--line-light)}
   .proc-lead{margin-top:1.1rem;font-family:var(--mono);font-size:14px;color:var(--gray)}
@@ -549,16 +539,7 @@
         <h2 class="cl-title">In good company<span class="dot">.</span></h2>
       </div>
     </div>
-        <div class="cl-marquee reveal">
-      <div class="cl-row"><div class="cl-track">
-        <span class="cl-logo"><img src="images/clients/vedanta.png" alt="Vedanta"></span><span class="cl-logo"><img src="images/clients/hdfc-bank.png" alt="HDFC Bank"></span><span class="cl-logo"><img src="images/clients/icici-prudential.png" alt="ICICI Prudential"></span><span class="cl-logo"><img src="images/clients/kotak-life.png" alt="Kotak Life"></span><span class="cl-logo"><img src="images/clients/tata-mutual-fund.png" alt="Tata Mutual Fund"></span><span class="cl-logo"><img src="images/clients/tata-aia.png" alt="Tata AIA"></span><span class="cl-logo"><img src="images/clients/aditya-birla.png" alt="Aditya Birla"></span><span class="cl-logo"><img src="images/clients/marico.png" alt="Marico"></span><span class="cl-logo"><img src="images/clients/polycab.png" alt="Polycab"></span><span class="cl-logo"><img src="images/clients/hindustan-zinc.png" alt="Hindustan Zinc"></span><span class="cl-logo"><img src="images/clients/jindal-steel.png" alt="Jindal Steel"></span><span class="cl-logo"><img src="images/clients/icici-lombard.png" alt="ICICI Lombard"></span><span class="cl-logo"><img src="images/clients/icici-home-finance.png" alt="ICICI Home Finance"></span><span class="cl-logo"><img src="images/clients/pnb.png" alt="Punjab National Bank"></span>
-        <span class="cl-logo"><img src="images/clients/vedanta.png" alt="Vedanta"></span><span class="cl-logo"><img src="images/clients/hdfc-bank.png" alt="HDFC Bank"></span><span class="cl-logo"><img src="images/clients/icici-prudential.png" alt="ICICI Prudential"></span><span class="cl-logo"><img src="images/clients/kotak-life.png" alt="Kotak Life"></span><span class="cl-logo"><img src="images/clients/tata-mutual-fund.png" alt="Tata Mutual Fund"></span><span class="cl-logo"><img src="images/clients/tata-aia.png" alt="Tata AIA"></span><span class="cl-logo"><img src="images/clients/aditya-birla.png" alt="Aditya Birla"></span><span class="cl-logo"><img src="images/clients/marico.png" alt="Marico"></span><span class="cl-logo"><img src="images/clients/polycab.png" alt="Polycab"></span><span class="cl-logo"><img src="images/clients/hindustan-zinc.png" alt="Hindustan Zinc"></span><span class="cl-logo"><img src="images/clients/jindal-steel.png" alt="Jindal Steel"></span><span class="cl-logo"><img src="images/clients/icici-lombard.png" alt="ICICI Lombard"></span><span class="cl-logo"><img src="images/clients/icici-home-finance.png" alt="ICICI Home Finance"></span><span class="cl-logo"><img src="images/clients/pnb.png" alt="Punjab National Bank"></span>
-      </div></div>
-      <div class="cl-row"><div class="cl-track rev">
-        <span class="cl-logo"><img src="images/clients/jlt.png" alt="JLT"></span><span class="cl-logo"><img src="images/clients/narsi-group.png" alt="Narsi Group"></span><span class="cl-logo"><img src="images/clients/vulcan-green-steel.png" alt="Vulcan Green Steel"></span><span class="cl-logo"><img src="images/clients/sohar-steel.png" alt="Sohar Steel"></span><span class="cl-logo"><img src="images/clients/american-eagle.png" alt="American Eagle"></span><span class="cl-logo"><img src="images/clients/zouk.png" alt="Zouk"></span><span class="cl-logo"><img src="images/clients/delta.png" alt="Delta"></span><span class="cl-logo"><img src="images/clients/armstrong.png" alt="Armstrong"></span><span class="cl-logo"><img src="images/clients/lingel.png" alt="Lingel"></span><span class="cl-logo"><img src="images/clients/toyama.png" alt="Toyama"></span><span class="cl-logo"><img src="images/clients/right-moves.png" alt="Right Moves"></span><span class="cl-logo"><img src="images/clients/snu.png" alt="Shiv Nadar University"></span><span class="cl-logo"><img src="images/clients/wadhwani-foundation.png" alt="Wadhwani Foundation"></span>
-        <span class="cl-logo"><img src="images/clients/jlt.png" alt="JLT"></span><span class="cl-logo"><img src="images/clients/narsi-group.png" alt="Narsi Group"></span><span class="cl-logo"><img src="images/clients/vulcan-green-steel.png" alt="Vulcan Green Steel"></span><span class="cl-logo"><img src="images/clients/sohar-steel.png" alt="Sohar Steel"></span><span class="cl-logo"><img src="images/clients/american-eagle.png" alt="American Eagle"></span><span class="cl-logo"><img src="images/clients/zouk.png" alt="Zouk"></span><span class="cl-logo"><img src="images/clients/delta.png" alt="Delta"></span><span class="cl-logo"><img src="images/clients/armstrong.png" alt="Armstrong"></span><span class="cl-logo"><img src="images/clients/lingel.png" alt="Lingel"></span><span class="cl-logo"><img src="images/clients/toyama.png" alt="Toyama"></span><span class="cl-logo"><img src="images/clients/right-moves.png" alt="Right Moves"></span><span class="cl-logo"><img src="images/clients/snu.png" alt="Shiv Nadar University"></span><span class="cl-logo"><img src="images/clients/wadhwani-foundation.png" alt="Wadhwani Foundation"></span>
-      </div></div>
-    </div>
+        <div class="cl-marquee reveal" id="clMarquee"></div>
   </section>
 
   <!-- ===== SERVICES ===== -->
@@ -1109,6 +1090,22 @@
   },{threshold:0.12});
   document.querySelectorAll('.work-card').forEach(c=>c.classList.add('reveal-scale'));
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  /* ===== CLIENT LOGO WALL — tile rows: 2 desktop / 4 mobile, all scrolling ===== */
+  (function(){
+    var wall=document.getElementById('clMarquee'); if(!wall) return;
+    var LOGOS=[["vedanta","Vedanta"],["hdfc-bank","HDFC Bank"],["icici-prudential","ICICI Prudential"],["kotak-life","Kotak Life"],["tata-mutual-fund","Tata Mutual Fund"],["tata-aia","Tata AIA"],["aditya-birla","Aditya Birla"],["marico","Marico"],["polycab","Polycab"],["hindustan-zinc","Hindustan Zinc"],["jindal-steel","Jindal Steel"],["icici-lombard","ICICI Lombard"],["icici-home-finance","ICICI Home Finance"],["pnb","Punjab National Bank"],["jlt","JLT"],["narsi-group","Narsi Group"],["vulcan-green-steel","Vulcan Green Steel"],["sohar-steel","Sohar Steel"],["american-eagle","American Eagle"],["zouk","Zouk"],["delta","Delta"],["armstrong","Armstrong"],["lingel","Lingel"],["toyama","Toyama"],["right-moves","Right Moves"],["snu","Shiv Nadar University"],["wadhwani-foundation","Wadhwani Foundation"]];
+    var current=0;
+    function tile(l){return '<span class="cl-logo"><img src="images/clients/'+l[0]+'.png" alt="'+l[1]+'"></span>';}
+    function build(rows){
+      var g=[],i; for(i=0;i<rows;i++) g.push([]);
+      LOGOS.forEach(function(l,j){g[j%rows].push(l);});
+      wall.innerHTML=g.map(function(row,ri){var set=row.map(tile).join('');return '<div class="cl-row"><div class="cl-track'+(ri%2?' rev':'')+'">'+set+set+'</div></div>';}).join('');
+      current=rows;
+    }
+    function want(){return matchMedia('(max-width:680px)').matches?4:2;}
+    build(want());
+    var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){var w=want();if(w!==current)build(w);},200);},{passive:true});
+  })();
 
   /* ===== FAQ ACCORDION ===== */
   document.querySelectorAll('.faq-item').forEach(item=>{
