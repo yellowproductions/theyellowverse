@@ -273,6 +273,7 @@
   .founder-copy .fc-name{font-weight:700;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;line-height:1.15}
   .founder-copy .fc-role{font-weight:500;color:var(--gray);margin-bottom:1.5rem}
   .founder-copy .fc-body p{font-size:clamp(15px,1.5vw,18px);line-height:1.55;letter-spacing:-.01em;margin-bottom:1rem}
+  .founder-copy .fc-body .fc-quote{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.9vw,23px);letter-spacing:-.01em;color:var(--ink);margin-top:1.3rem;margin-bottom:0}
   .founder-sign{margin-top:1.4rem;align-self:flex-end;width:210px;opacity:.82}
   /* stack ticker */
   .stack{margin-top:.6rem;border:1px solid var(--line-light);border-radius:14px;background:#fff;display:flex;align-items:center;overflow:hidden}
@@ -283,7 +284,7 @@
   .stack:hover .stack-row{animation-play-state:paused}
   @keyframes scrollx{to{transform:translateX(-50%)}}
   .stack-item{display:flex;align-items:center;gap:.6rem;flex:none;font-weight:600;font-size:14px;color:var(--gray);letter-spacing:-.01em}
-  .stack-item img{width:22px;height:22px}
+  .stack-item img{width:27px;height:27px}
 
   /* ===== NOTES (light) ===== */
   .notes{background:#fff;border-top:1px solid var(--line-light)}
@@ -673,7 +674,7 @@
   <section class="founder sec-pad">
     <div class="wrap">
       <div class="headbar on-light reveal"><span>Founder</span><span>The Yellow</span></div>
-      <h2 class="sec-title reveal" style="margin-top:2.4rem">Meet the Founder</h2>
+      <h2 class="sec-title reveal" style="margin-top:2.4rem">Meet the mind behind The Yellow.</h2>
       <p class="founder-sub reveal">Not another "visionary." Just someone who knows exactly what works — and executes without excuses.</p>
       <div class="founder-card reveal reveal-scale">
         <div class="founder-photo">
@@ -681,10 +682,12 @@
         </div>
         <div class="founder-copy">
           <div class="fc-name">Suriti Arora</div>
-          <div class="fc-role">Founder, The Yellow</div>
+          <div class="fc-role">Founder &amp; Creative Director, The Yellow</div>
           <div class="fc-body">
-            <p>Started Yellow in 2015 to fix something specific — the gap between what an agency strategist promises and what the production team actually delivers. Most agencies put them in different rooms. We don't.</p>
-            <p>That principle is how work for Kotak Life, Vedanta, ICICI Prudential, Hindustan Zinc, and Jindal Steel gets made. Same brief, same team, end to end. Across India and the Middle East.</p>
+            <p>An IT engineer with an MBA in marketing — and a designer at heart. After years across IT, sales and marketing, Suriti started her own studio to do the work that genuinely excited her: building brands.</p>
+            <p>She built it on one rule — the work comes first. Fast, sharp, flexible, available around the clock. With no business-development team and not a single cold pitch, top conglomerates came on word of mouth alone, because the craft spoke for itself.</p>
+            <p>It began by fixing one thing: the gap between what a strategist promises and what production actually delivers — most agencies keep them in separate rooms; we don't. As the work grew, so did the group — Perky Owl Designs for pure design, Yellow Productions for end-to-end production, and Yellow Designs as an independent Omani studio with global capability.</p>
+            <p class="fc-quote">&ldquo;Stay true to your craft.&rdquo;</p>
           </div>
           <div class="founder-sign">
             <img src="https://framerusercontent.com/images/bHo4pqtjiEhsJxYdvcxAhldmWW0.png" alt="Suriti Arora signature" loading="lazy" />
@@ -1140,15 +1143,14 @@
 
   /* ===== OUR STACK TICKER ===== */
   const STACK=[
-    ['Framer','framer'],['Figma','figma'],['Illustrator','adobeillustrator'],
-    ['Photoshop','adobephotoshop'],['After Effects','adobeaftereffects'],
-    ['Premiere Pro','adobepremierepro'],['Lightroom','adobelightroom'],
-    ['Blender','blender'],['Canva','canva'],['DaVinci Resolve','davinciresolve']
+    ['Framer','framer'],['Figma','figma'],['Illustrator','illustrator'],
+    ['Photoshop','photoshop'],['After Effects','after-effects'],
+    ['Premiere Pro','premiere-pro'],['Lightroom','lightroom'],['Blender','blender']
   ];
   const stackRow=document.getElementById('stackRow');
   if(stackRow){
     const set=()=>STACK.map(([n,s])=>
-      `<span class="stack-item"><img src="https://cdn.simpleicons.org/${s}" alt="" loading="lazy"/>${n}</span>`).join('');
+      `<span class="stack-item"><img src="images/stack/${s}.png" alt="${n}" loading="lazy"/>${n}</span>`).join('');
     stackRow.innerHTML=set()+set();
   }
 
