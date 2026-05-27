@@ -218,8 +218,8 @@
   .svc-card p{font-family:var(--mono);font-size:13px;line-height:1.6;color:var(--gray)}
 
   /* ===== PROCESS (light) ===== */
-  .clients{background:#fff;color:var(--ink);padding:3rem 0;overflow:hidden}
-  .cl-head{margin-bottom:1.8rem}
+  .clients{background:var(--paper);color:var(--ink);padding:4.5rem 0;overflow:hidden}
+  .cl-head{margin-bottom:2.6rem}
   .cl-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow-deep);display:block;margin-bottom:.9rem}
   .cl-title{font-family:var(--serif);font-weight:360;font-size:clamp(26px,3.4vw,42px);line-height:1.1;letter-spacing:-.03em}
   .cl-marquee{display:flex;flex-direction:column;gap:1.2rem;
@@ -228,17 +228,18 @@
   .cl-row{display:flex;overflow:hidden}
   .cl-track{display:flex;flex:none;align-items:center;width:max-content;animation:cl-scroll 70s linear infinite;will-change:transform}
   .cl-track.rev{animation-direction:reverse}
-  .cl-track img{flex:none;height:165px;width:auto;object-fit:contain;margin:0 3.4rem;opacity:.92;transition:opacity .25s ease}
-  .cl-track img:hover{opacity:1}
+  .cl-logo{flex:none;width:210px;height:96px;display:flex;align-items:center;justify-content:center;padding:0 1rem;opacity:.9;transition:opacity .25s ease}
+  .cl-logo:hover{opacity:1}
+  .cl-logo img{max-width:82%;max-height:64px;width:auto;height:auto;object-fit:contain}
   @keyframes cl-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @media(prefers-reduced-motion:reduce){.cl-track{animation:none}.cl-row{overflow-x:auto}}
   @media(max-width:680px){
-    .cl-marquee{gap:1.4rem;-webkit-mask-image:none;mask-image:none}
-    .cl-row{overflow:visible}
-    .cl-track{display:grid;grid-template-columns:repeat(2,1fr);gap:1.9rem 1rem;width:auto;animation:none}
-    .cl-track:not(.rev) img:nth-child(n+15){display:none}
-    .cl-track.rev img:nth-child(n+14){display:none}
-    .cl-track img{height:auto;max-height:64px;max-width:80%;margin:0 auto}
+    .cl-marquee{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;-webkit-mask-image:none;mask-image:none}
+    .cl-row,.cl-track{display:contents}
+    .cl-track:not(.rev) .cl-logo:nth-child(n+15){display:none}
+    .cl-track.rev .cl-logo:nth-child(n+14){display:none}
+    .cl-logo{width:auto;height:88px;padding:0 .5rem}
+    .cl-logo img{max-height:52px;max-width:80%}
   }
 
   .process{background:#fff;border-top:1px solid var(--line-light)}
@@ -548,14 +549,14 @@
         <h2 class="cl-title">In good company<span class="dot">.</span></h2>
       </div>
     </div>
-    <div class="cl-marquee reveal">
+        <div class="cl-marquee reveal">
       <div class="cl-row"><div class="cl-track">
-        <img src="images/clients/vedanta.png" alt="Vedanta"><img src="images/clients/hdfc-bank.png" alt="HDFC Bank"><img src="images/clients/icici-prudential.png" alt="ICICI Prudential"><img src="images/clients/kotak-life.png" alt="Kotak Life"><img src="images/clients/tata-mutual-fund.png" alt="Tata Mutual Fund"><img src="images/clients/tata-aia.png" alt="Tata AIA"><img src="images/clients/aditya-birla.png" alt="Aditya Birla"><img src="images/clients/marico.png" alt="Marico"><img src="images/clients/polycab.png" alt="Polycab"><img src="images/clients/hindustan-zinc.png" alt="Hindustan Zinc"><img src="images/clients/jindal-steel.png" alt="Jindal Steel"><img src="images/clients/icici-lombard.png" alt="ICICI Lombard"><img src="images/clients/icici-home-finance.png" alt="ICICI Home Finance"><img src="images/clients/pnb.png" alt="Punjab National Bank">
-        <img src="images/clients/vedanta.png" alt="Vedanta"><img src="images/clients/hdfc-bank.png" alt="HDFC Bank"><img src="images/clients/icici-prudential.png" alt="ICICI Prudential"><img src="images/clients/kotak-life.png" alt="Kotak Life"><img src="images/clients/tata-mutual-fund.png" alt="Tata Mutual Fund"><img src="images/clients/tata-aia.png" alt="Tata AIA"><img src="images/clients/aditya-birla.png" alt="Aditya Birla"><img src="images/clients/marico.png" alt="Marico"><img src="images/clients/polycab.png" alt="Polycab"><img src="images/clients/hindustan-zinc.png" alt="Hindustan Zinc"><img src="images/clients/jindal-steel.png" alt="Jindal Steel"><img src="images/clients/icici-lombard.png" alt="ICICI Lombard"><img src="images/clients/icici-home-finance.png" alt="ICICI Home Finance"><img src="images/clients/pnb.png" alt="Punjab National Bank">
+        <span class="cl-logo"><img src="images/clients/vedanta.png" alt="Vedanta"></span><span class="cl-logo"><img src="images/clients/hdfc-bank.png" alt="HDFC Bank"></span><span class="cl-logo"><img src="images/clients/icici-prudential.png" alt="ICICI Prudential"></span><span class="cl-logo"><img src="images/clients/kotak-life.png" alt="Kotak Life"></span><span class="cl-logo"><img src="images/clients/tata-mutual-fund.png" alt="Tata Mutual Fund"></span><span class="cl-logo"><img src="images/clients/tata-aia.png" alt="Tata AIA"></span><span class="cl-logo"><img src="images/clients/aditya-birla.png" alt="Aditya Birla"></span><span class="cl-logo"><img src="images/clients/marico.png" alt="Marico"></span><span class="cl-logo"><img src="images/clients/polycab.png" alt="Polycab"></span><span class="cl-logo"><img src="images/clients/hindustan-zinc.png" alt="Hindustan Zinc"></span><span class="cl-logo"><img src="images/clients/jindal-steel.png" alt="Jindal Steel"></span><span class="cl-logo"><img src="images/clients/icici-lombard.png" alt="ICICI Lombard"></span><span class="cl-logo"><img src="images/clients/icici-home-finance.png" alt="ICICI Home Finance"></span><span class="cl-logo"><img src="images/clients/pnb.png" alt="Punjab National Bank"></span>
+        <span class="cl-logo"><img src="images/clients/vedanta.png" alt="Vedanta"></span><span class="cl-logo"><img src="images/clients/hdfc-bank.png" alt="HDFC Bank"></span><span class="cl-logo"><img src="images/clients/icici-prudential.png" alt="ICICI Prudential"></span><span class="cl-logo"><img src="images/clients/kotak-life.png" alt="Kotak Life"></span><span class="cl-logo"><img src="images/clients/tata-mutual-fund.png" alt="Tata Mutual Fund"></span><span class="cl-logo"><img src="images/clients/tata-aia.png" alt="Tata AIA"></span><span class="cl-logo"><img src="images/clients/aditya-birla.png" alt="Aditya Birla"></span><span class="cl-logo"><img src="images/clients/marico.png" alt="Marico"></span><span class="cl-logo"><img src="images/clients/polycab.png" alt="Polycab"></span><span class="cl-logo"><img src="images/clients/hindustan-zinc.png" alt="Hindustan Zinc"></span><span class="cl-logo"><img src="images/clients/jindal-steel.png" alt="Jindal Steel"></span><span class="cl-logo"><img src="images/clients/icici-lombard.png" alt="ICICI Lombard"></span><span class="cl-logo"><img src="images/clients/icici-home-finance.png" alt="ICICI Home Finance"></span><span class="cl-logo"><img src="images/clients/pnb.png" alt="Punjab National Bank"></span>
       </div></div>
       <div class="cl-row"><div class="cl-track rev">
-        <img src="images/clients/jlt.png" alt="JLT"><img src="images/clients/narsi-group.png" alt="Narsi Group"><img src="images/clients/vulcan-green-steel.png" alt="Vulcan Green Steel"><img src="images/clients/sohar-steel.png" alt="Sohar Steel"><img src="images/clients/american-eagle.png" alt="American Eagle"><img src="images/clients/zouk.png" alt="Zouk"><img src="images/clients/delta.png" alt="Delta"><img src="images/clients/armstrong.png" alt="Armstrong"><img src="images/clients/lingel.png" alt="Lingel"><img src="images/clients/toyama.png" alt="Toyama"><img src="images/clients/right-moves.png" alt="Right Moves"><img src="images/clients/snu.png" alt="Shiv Nadar University"><img src="images/clients/wadhwani-foundation.png" alt="Wadhwani Foundation">
-        <img src="images/clients/jlt.png" alt="JLT"><img src="images/clients/narsi-group.png" alt="Narsi Group"><img src="images/clients/vulcan-green-steel.png" alt="Vulcan Green Steel"><img src="images/clients/sohar-steel.png" alt="Sohar Steel"><img src="images/clients/american-eagle.png" alt="American Eagle"><img src="images/clients/zouk.png" alt="Zouk"><img src="images/clients/delta.png" alt="Delta"><img src="images/clients/armstrong.png" alt="Armstrong"><img src="images/clients/lingel.png" alt="Lingel"><img src="images/clients/toyama.png" alt="Toyama"><img src="images/clients/right-moves.png" alt="Right Moves"><img src="images/clients/snu.png" alt="Shiv Nadar University"><img src="images/clients/wadhwani-foundation.png" alt="Wadhwani Foundation">
+        <span class="cl-logo"><img src="images/clients/jlt.png" alt="JLT"></span><span class="cl-logo"><img src="images/clients/narsi-group.png" alt="Narsi Group"></span><span class="cl-logo"><img src="images/clients/vulcan-green-steel.png" alt="Vulcan Green Steel"></span><span class="cl-logo"><img src="images/clients/sohar-steel.png" alt="Sohar Steel"></span><span class="cl-logo"><img src="images/clients/american-eagle.png" alt="American Eagle"></span><span class="cl-logo"><img src="images/clients/zouk.png" alt="Zouk"></span><span class="cl-logo"><img src="images/clients/delta.png" alt="Delta"></span><span class="cl-logo"><img src="images/clients/armstrong.png" alt="Armstrong"></span><span class="cl-logo"><img src="images/clients/lingel.png" alt="Lingel"></span><span class="cl-logo"><img src="images/clients/toyama.png" alt="Toyama"></span><span class="cl-logo"><img src="images/clients/right-moves.png" alt="Right Moves"></span><span class="cl-logo"><img src="images/clients/snu.png" alt="Shiv Nadar University"></span><span class="cl-logo"><img src="images/clients/wadhwani-foundation.png" alt="Wadhwani Foundation"></span>
+        <span class="cl-logo"><img src="images/clients/jlt.png" alt="JLT"></span><span class="cl-logo"><img src="images/clients/narsi-group.png" alt="Narsi Group"></span><span class="cl-logo"><img src="images/clients/vulcan-green-steel.png" alt="Vulcan Green Steel"></span><span class="cl-logo"><img src="images/clients/sohar-steel.png" alt="Sohar Steel"></span><span class="cl-logo"><img src="images/clients/american-eagle.png" alt="American Eagle"></span><span class="cl-logo"><img src="images/clients/zouk.png" alt="Zouk"></span><span class="cl-logo"><img src="images/clients/delta.png" alt="Delta"></span><span class="cl-logo"><img src="images/clients/armstrong.png" alt="Armstrong"></span><span class="cl-logo"><img src="images/clients/lingel.png" alt="Lingel"></span><span class="cl-logo"><img src="images/clients/toyama.png" alt="Toyama"></span><span class="cl-logo"><img src="images/clients/right-moves.png" alt="Right Moves"></span><span class="cl-logo"><img src="images/clients/snu.png" alt="Shiv Nadar University"></span><span class="cl-logo"><img src="images/clients/wadhwani-foundation.png" alt="Wadhwani Foundation"></span>
       </div></div>
     </div>
   </section>
