@@ -279,18 +279,24 @@
   .pill{display:inline-flex;align-items:center;gap:.6rem;background:var(--yellow);color:#000;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:1rem 2.2rem;border-radius:100px;transition:transform .25s ease}
   .pill:hover{transform:translateY(-2px)}
 
-  /* ===== FOUNDER (light) ===== */
-  .founder{background:var(--paper)}
+  /* ===== FOUNDER (light, name-behind) ===== */
+  .founder{background:var(--paper);overflow:hidden}
   .founder-sub{margin-top:1.2rem;font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);max-width:60ch;line-height:1.7}
-  .founder-card{margin-top:3rem;display:grid;grid-template-columns:360px 1fr;gap:.6rem;border:1px solid var(--line-light);border-radius:14px;padding:10px;background:#fff}
-  .founder-photo{border-radius:6px;overflow:hidden;background:#ebe9e3}
-  .founder-photo img{width:100%;height:100%;object-fit:cover;min-height:390px}
-  .founder-copy{padding:2.4rem 2.2rem;display:flex;flex-direction:column}
-  .founder-copy .fc-name{font-weight:700;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;line-height:1.15}
-  .founder-copy .fc-role{font-weight:500;color:var(--gray);margin-bottom:1.5rem}
-  .founder-copy .fc-body p{font-size:clamp(15px,1.5vw,18px);line-height:1.55;letter-spacing:-.01em;margin-bottom:1rem}
-  .founder-copy .fc-body .fc-quote{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.9vw,23px);letter-spacing:-.01em;color:var(--ink);margin-top:1.3rem;margin-bottom:0}
-  .founder-sign{margin-top:1.4rem;align-self:flex-end;width:210px;opacity:.82}
+
+  .founder-stage{position:relative;margin-top:2.4rem;display:flex;align-items:center;justify-content:center;min-height:clamp(360px,46vw,580px)}
+  .founder-bgname{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;pointer-events:none;user-select:none}
+  .founder-bgname span{font-family:var(--display);font-weight:800;line-height:.8;letter-spacing:-.045em;font-size:clamp(62px,15.5vw,176px);white-space:nowrap}
+  .founder-bgname .bgn-top{color:var(--ink)}
+  .founder-bgname .bgn-bot{color:transparent;-webkit-text-stroke:2px var(--ink);text-stroke:2px var(--ink)}
+  .founder-bgname .bgn-bot .dot{-webkit-text-stroke:0;color:var(--yellow-deep)}
+  .founder-photo-lg{position:relative;z-index:2;width:clamp(252px,33vw,392px);aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:#ebe9e3;box-shadow:0 34px 80px -34px rgba(0,0,0,.45)}
+  .founder-photo-lg img{width:100%;height:100%;object-fit:cover}
+
+  .founder-detail{max-width:760px;margin:2.6rem auto 0;text-align:center}
+  .founder-detail .fc-role{font-weight:500;color:var(--gray);font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.6rem}
+  .founder-detail .fc-body p{font-size:clamp(15px,1.55vw,18.5px);line-height:1.62;letter-spacing:-.01em;margin-bottom:1.05rem;color:var(--ink)}
+  .founder-detail .fc-body .fc-quote{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.3vw,28px);letter-spacing:-.01em;color:var(--ink);margin-top:1.7rem;margin-bottom:0}
+  .founder-sign{margin:1.3rem auto 0;width:210px;opacity:.82}
   /* stack ticker */
   .stack{margin-top:.6rem;border:1px solid var(--line-light);border-radius:14px;background:#fff;display:flex;align-items:center;overflow:hidden}
   .stack-label{flex:none;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);padding:1.35rem 1.5rem;border-right:1px solid var(--line-light)}
@@ -435,8 +441,7 @@
   @media(max-width:980px){
     .works-layout,.testi-layout{grid-template-columns:1fr;gap:2rem}
     .works-side,.testi-side{position:static}
-    .founder-card{grid-template-columns:1fr}
-    .founder-photo{min-height:340px}
+    .founder-bgname span{font-size:clamp(58px,17vw,140px)}
     .group-grid{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:760px){
@@ -724,22 +729,29 @@
       <div class="headbar on-light reveal"><span>Founder</span><span>The Yellow</span></div>
       <h2 class="sec-title reveal" style="margin-top:2.4rem">Meet the mind behind The Yellow.</h2>
       <p class="founder-sub reveal">Not another "visionary." Just someone who knows exactly what works — and executes without excuses.</p>
-      <div class="founder-card reveal reveal-scale">
-        <div class="founder-photo">
-          <img src="https://framerusercontent.com/images/MH41QBfqlauPOEgiuOwe5fbe1k.jpg" alt="Suriti Arora" loading="lazy" />
+
+      <div class="founder-stage reveal reveal-scale">
+        <div class="founder-bgname" aria-hidden="true">
+          <span class="bgn-top">SURITI</span>
+          <span class="bgn-bot">ARORA<i class="dot">.</i></span>
         </div>
-        <div class="founder-copy">
-          <div class="fc-name">Suriti Arora</div>
-          <div class="fc-role">Founder &amp; Creative Director, The Yellow</div>
-          <div class="fc-body">
-            <p>An IT engineer with an MBA in marketing — and a designer at heart. After years across IT, sales and marketing, Suriti started her own studio to do the work that genuinely excited her: building brands.</p>
-            <p>She built it on one rule — the work comes first. Fast, sharp, flexible, available around the clock. With no business-development team and not a single cold pitch, top conglomerates came on word of mouth alone, because the craft spoke for itself.</p>
-            <p>It began by fixing one thing: the gap between what a strategist promises and what production actually delivers — most agencies keep them in separate rooms; we don't. As the work grew, so did the group — Perky Owl Designs for pure design, Yellow Productions for end-to-end production, and Yellow Designs as an independent Omani studio with global capability.</p>
-            <p class="fc-quote">&ldquo;Stay true to your craft.&rdquo;</p>
-          </div>
-          <div class="founder-sign">
-            <img src="https://framerusercontent.com/images/bHo4pqtjiEhsJxYdvcxAhldmWW0.png" alt="Suriti Arora signature" loading="lazy" />
-          </div>
+        <div class="founder-photo-lg">
+          <img src="https://framerusercontent.com/images/MH41QBfqlauPOEgiuOwe5fbe1k.jpg" alt="Suriti Arora, Founder of The Yellow" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="founder-detail reveal">
+        <div class="fc-role">Founder &amp; Creative Director &middot; The Yellow</div>
+        <div class="fc-body">
+          <p>Most agencies separate strategy, design, production and execution. Suriti built The Yellow because she was tired of watching ideas fall apart between departments.</p>
+          <p>An engineer with an MBA in marketing, she started her journey across IT, sales and branding before building her own ecosystem of creative companies spanning India and the Middle East.</p>
+          <p>What started as one design studio evolved into a multi-disciplinary creative group — brands, films, events, campaigns, retail experiences, digital communication, stadium branding, exhibitions, large-scale production, and now sports leagues — all built under one vision.</p>
+          <p>No business-development teams. No aggressive pitching. Just years of work travelling through word of mouth.</p>
+          <p>Today, The Yellow works across industries and geographies with one belief at its core: <span class="hl">good ideas deserve good execution — and execution deserves obsession.</span></p>
+          <p class="fc-quote">&ldquo;Stay true to your craft<i class="dot">.</i>&rdquo;</p>
+        </div>
+        <div class="founder-sign">
+          <img src="https://framerusercontent.com/images/bHo4pqtjiEhsJxYdvcxAhldmWW0.png" alt="Suriti Arora signature" loading="lazy" />
         </div>
       </div>
 
