@@ -1047,12 +1047,15 @@
   }
   scheduled=setTimeout(showNext,1400);
 
-  try{
-    const mod = await import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js');
-    mod.default(document.getElementById('introCanvas'), {
+  /* Background 3D tube effect — loaded lazily and NON-blocking (no top-level
+     await, which breaks module parsing on Safari < 15 / older iPhones). If the
+     CDN is slow, blocked, or unsupported, the intro still works and entering is
+     instant; the effect just doesn't paint. */
+  import('https://cdn.jsdelivr.net/npm/threejs-components@0.0.19/build/cursors/tubes1.min.js')
+    .then(mod => mod.default(document.getElementById('introCanvas'), {
       tubes:{ colors:["#ffd400","#FF2E93","#00E5FF"], lights:{ intensity:180, colors:["#ffd400","#FF2E93","#00E5FF","#A855F7"] } }
-    });
-  }catch(e){ console.warn('tube cursor unavailable'); }
+    }))
+    .catch(() => { console.warn('tube cursor unavailable'); });
 
   /* ===== ENTER ===== */
   const intro=document.getElementById('intro'), home=document.getElementById('home');
